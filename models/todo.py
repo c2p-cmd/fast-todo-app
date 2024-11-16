@@ -1,6 +1,8 @@
 from uuid import uuid4
 from pydantic import BaseModel
 
+class TodoItemContent(BaseModel):
+    content: str
 
 class ToDoItem(BaseModel):
     id: str
@@ -15,11 +17,12 @@ class ItemManager:
     def get_all(self) -> list[ToDoItem]:
         sort_descriptor = lambda e: e.is_completed
         self.__item_list.sort(key=sort_descriptor, reverse=True)
+        return self.__item_list
 
-    def add_new(self, content: str):
+    def add_new(self, item: TodoItemContent):
         new_id = str(uuid4())
-        item = ToDoItem(id=new_id, content=content)
-        self.__item_list.append(item)
+        todo_item = ToDoItem(id=new_id, content=item.content)
+        self.__item_list.append(todo_item)
 
     def toggle_status(self, id: str):
         items: list[ToDoItem] = [item for item in self.__item_list if item.id == id]
