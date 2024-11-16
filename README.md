@@ -15,6 +15,17 @@ Fast ToDo App is a simple, responsive web-based application built using **FastAP
 
 ---
 
+### **Deployment Link:**
+
+- Deployed on [Render](https://render.com/) [visit](https://fast-todo-app.onrender.com/)
+
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/c2p-cmd/fast-todo-app)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fc2p-cmd%2Ffast-todo-app)
+
+---
+
 ## **Getting Started**
 
 ### **Prerequisites**
@@ -25,12 +36,14 @@ Fast ToDo App is a simple, responsive web-based application built using **FastAP
 ### **Installation**
 
 1. **Clone the Repository**
+
    ```bash
    git clone https://github.com/c2p-cmd/fast-todo-app
    cd fast-todo-app
    ```
 
 2. **Set Up the Backend**
+
    - Create a virtual environment:
      ```bash
      python -m venv venv
@@ -42,9 +55,11 @@ Fast ToDo App is a simple, responsive web-based application built using **FastAP
      ```
 
 3. **Run the FastAPI Server**
+
    ```bash
    python3 app.py
    ```
+
    The application will be available at `http://127.0.0.1:7860`.
 
 4. **Frontend Configuration**
@@ -72,13 +87,16 @@ fast-todo-app/
 ## **Usage**
 
 ### **Adding a Task**
+
 1. Enter a task description in the input field.
 2. Click the **"Add Item"** button to add the task to the list.
 
 ### **Completing or Uncompleting a Task**
+
 - Use the checkbox next to a task to toggle its completion status.
 
 ### **Deleting a Task**
+
 - Click the trash icon next to a task to delete it from the list.
 
 ---
@@ -86,11 +104,13 @@ fast-todo-app/
 ## **Technical Details**
 
 ### **Frontend**
+
 - **Bootstrap** is used for styling the application.
 - Dynamic updates are handled using **JavaScript**.
 - Inline templates are rendered using **Jinja2** for server-side rendering.
 
 ### **Backend**
+
 - **FastAPI** serves as the backend framework.
 
 ---
@@ -98,10 +118,12 @@ fast-todo-app/
 ## **Screenshots**
 
 ### Desktop View
-*Coming Soon*
+
+_Coming Soon_
 
 ### Mobile View
-*Coming Soon*
+
+_Coming Soon_
 
 ---
 
@@ -113,8 +135,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## **Acknowledgments**
 
-- [FastAPI](https://fastapi.tiangolo.com/) 
-- [Bootstrap](https://getbootstrap.com/) 
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Bootstrap](https://getbootstrap.com/)
 - [Font Awesome](https://fontawesome.com/)
 
 ---
