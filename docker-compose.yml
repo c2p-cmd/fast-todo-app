@@ -1,7 +1,0 @@
-services:
-  web:
-    build: .
-    ports:
-      - "7860:7860"
-    volumes:
-      - ./:/web-app
