@@ -37,8 +37,11 @@ class ItemManager:
         item.is_completed = not item.is_completed
 
     def remove_item(self, id: str):
-        items: list[ToDoItem] = filter(lambda e: e.id == id, self.__item_list)
+        items: list[ToDoItem] = [item for item in self.__item_list if item.id == id]
         if not items:
             raise Exception("Item Not Found")
         if len(items) == 0:
             raise Exception("Item Not Found")
+        
+        item = items[0]
+        self.__item_list.remove(item)
