@@ -18,7 +18,7 @@ class ItemManager:
 
     def get_all(self) -> list[ToDoItem]:
         sort_descriptor = lambda e: e.is_completed
-        self.__item_list.sort(key=sort_descriptor, reverse=True)
+        self.__item_list.sort(key=sort_descriptor, reverse=False)
         return self.__item_list
 
     def add_new(self, item: TodoItemContent):
@@ -26,22 +26,22 @@ class ItemManager:
         todo_item = ToDoItem(id=new_id, content=item.content)
         self.__item_list.append(todo_item)
 
-    def toggle_status(self, id: str):
+    def update_status(self, id: str, new_status: bool):
         items: list[ToDoItem] = [item for item in self.__item_list if item.id == id]
         if not items:
-            raise Exception("Item Not Found")
+            raise Exception(message="Item Not Found")
         if len(items) == 0:
-            raise Exception("Item Not Found")
+            raise Exception(message="Item Not Found")
 
         item = items[0]
-        item.is_completed = not item.is_completed
+        item.is_completed = new_status
 
     def remove_item(self, id: str):
         items: list[ToDoItem] = [item for item in self.__item_list if item.id == id]
         if not items:
-            raise Exception("Item Not Found")
+            raise Exception(message="Item Not Found")
         if len(items) == 0:
-            raise Exception("Item Not Found")
-        
+            raise Exception(message="Item Not Found")
+
         item = items[0]
         self.__item_list.remove(item)
