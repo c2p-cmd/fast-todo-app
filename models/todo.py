@@ -1,8 +1,10 @@
 from uuid import uuid4
 from pydantic import BaseModel
 
+
 class TodoItemContent(BaseModel):
     content: str
+
 
 class ToDoItem(BaseModel):
     id: str
